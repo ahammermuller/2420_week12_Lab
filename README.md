@@ -70,6 +70,7 @@ To create a new one type the command:
 Inside the editor type the following content changing the IPV4 address 192.168.0.0
  for your doplet IPV4 address:
 
+>
 > server {
 >        listen 80;
 >        listen [::]:80;
@@ -83,6 +84,7 @@ Inside the editor type the following content changing the IPV4 address 192.168.0
 >                try_files $uri $uri/ =404;
 >        }
 > }
+>
 
 Create a soft link to your server block by typing the following command and changing the
 IPV4 address 192.168.0.0. to your droplet IPV4 address:
