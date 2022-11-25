@@ -48,6 +48,7 @@ Create a new directory by typing the following command and changing the IPV4 add
 Move this directory inside another one that has the IPV4 address as a dicrectory name. 
 This way you can organize the content by host machine because NGINX can serve multiple
 sites in a single host machine.
+
 ** Remember to change the IPV4 192.168.0.0 tou your droplet IPV4 address
 
 > sudo mv /var/www/200~192.168.0.0 /var/www/192.168.0.0
