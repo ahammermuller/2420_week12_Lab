@@ -120,7 +120,7 @@ The availables applications are displayed using the following command:
 - Nginx HTTPS: opens only port 443 (TLS/SSL encrypted traffic)
 - OpenSSH
 
-** In our case we selected the NginxHTTP and OpenSSH to just allow conexions with our HTTP by port 80 ans SSH conexions.
+** In our case we selected the NginxHTTP and OpenSSH to just allow conexions with our HTTP by port 80 and SSH conexions.
 
 You can enable this using the following commands:
 
