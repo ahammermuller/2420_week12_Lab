@@ -36,7 +36,7 @@ To check if the service is enable you can type
 
 > systemctl status nginx.service
 
-## Creating the HTML files and directories
+### Creating the HTML files and directories
 
 The NGINX default content is stores at /var/www/html
 
@@ -57,7 +57,7 @@ droplet IPV4 address:
 
 > sudo vim /var/www/192.168.0.0/html/index.html
 
-## Creating a new server block
+### Creating a new server block
 
 The servers blocks are located at /etc/nginx/sites-available
 
@@ -90,7 +90,7 @@ IPV4 address 192.168.0.0. to your droplet IPV4 address:
 
 > sudo ln -s /etc/nginx/sites-available/192.168.0.0 /etc/nginx/sites-enabled/
 
-## Testing NGINX configueation
+### Testing NGINX configueation
 
 To test if there is no syntax error and if everything is working properly type the following command:
 
@@ -98,9 +98,45 @@ To test if there is no syntax error and if everything is working properly type t
 
 The result will be syntax is ok amd test is sucessful.
 
-## Restarting the server
+### Restarting the server
 
 Finally to apply all the mofifications is just restart the server
 
 > sudo systemctl restart nginx
+
+## Installing UFW
+	
+You can ckeck the status of your UFW trough the command:
+
+> sudo ufw status
+
+The availables applications are displayed using the following command:
+
+> sudo ufw app list
+
+- Nginx Full: Opens both port 80 (normal, unencrypted web traffic) and port 443 (TLS/SSL encrypted traffic)
+- Nginx HTTP: Opens only port 80 (normal, unencrypted web traffic)
+- Nginx HTTPS: opens only port 443 (TLS/SSL encrypted traffic)
+- OpenSSH
+
+* In our case we selected the NginxHTTP and OpenSSH to just allow conexions with our HTTP by port 80 ans SSH conexions.
+
+You can enable this using the following commands:
+
+> sudo ufw allow OpenSSH
+
+> sudo ufw allow 'Nginx HTTP'
+
+### Enabling / Disabling UFW
+
+To enable your firewall type:
+
+> sudo ufw enable
+
+To disble your firewall type:
+
+> sudo ufw diable
+	
+* Ensure that your are still able to connect to your server using SSH and HTTP.
+
 
