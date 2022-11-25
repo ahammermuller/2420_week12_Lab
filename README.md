@@ -74,12 +74,9 @@ Inside the editor type the following content changing the IPV4 address 192.168.0
 > server {
 >        listen 80;
 >        listen [::]:80;
->
 >        root /var/www/192.168.0.0/html;
 >        index index.html;
->
 >        server_name 192.168.0.0;
->
 >        location / {
 >                try_files $uri $uri/ =404;
 >        }
