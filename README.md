@@ -48,7 +48,7 @@ Create a new directory by typing the following command and changing the IPV4 add
 Move this directory inside another one that has the IPV4 address as a dicrectory name. 
 This way you can organize the content by host machine because NGINX can serve multiple
 sites in a single host machine.
-**Remember to change the IPV4 192.168.0.0 tou your droplet IPV4 address
+** Remember to change the IPV4 192.168.0.0 tou your droplet IPV4 address
 
 > sudo mv /var/www/200~192.168.0.0 /var/www/192.168.0.0
 
@@ -90,7 +90,7 @@ IPV4 address 192.168.0.0. to your droplet IPV4 address:
 
 > sudo ln -s /etc/nginx/sites-available/192.168.0.0 /etc/nginx/sites-enabled/
 
-### Testing NGINX configueation
+### Testing NGINX configuration
 
 To test if there is no syntax error and if everything is working properly type the following command:
 
@@ -119,7 +119,7 @@ The availables applications are displayed using the following command:
 - Nginx HTTPS: opens only port 443 (TLS/SSL encrypted traffic)
 - OpenSSH
 
-**In our case we selected the NginxHTTP and OpenSSH to just allow conexions with our HTTP by port 80 ans SSH conexions.
+** In our case we selected the NginxHTTP and OpenSSH to just allow conexions with our HTTP by port 80 ans SSH conexions.
 
 You can enable this using the following commands:
 
@@ -137,6 +137,6 @@ To disble your firewall type:
 
 > sudo ufw diable
 	
-**Ensure that your are still able to connect to your server using SSH and HTTP.
+** Ensure that your are still able to connect to your server using SSH and HTTP.
 
 
